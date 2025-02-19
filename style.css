@@ -10,13 +10,13 @@ body {
 .cassette {
   width: 400px;
   height: 250px;
-  padding: 20px;
+  padding: 30px 25px 0 25px;
   background-color: #444444;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
 }
 
 .white-part {
@@ -31,11 +31,71 @@ body {
 
 .tape-section {
   width: 100%;
-  height: 40%;
-  background: black;
+  height: 60%;
+
+  background: linear-gradient(
+    to bottom,
+    #e91e63 0%,
+    #e91e63 20%,
+    #e57373 20%,
+    #e57373 40%,
+    #ffeb3b 40%,
+    #ffeb3b 60%,
+    #8bc34a 60%,
+    #8bc34a 80%,
+    #2196f3 80%,
+    #2196f3 100% /* Azul */
+  );
+
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.tape-container {
+  width: 50%;
+  height: 60%;
+  background: #444444;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tuerca {
+  width: 50px;
+  height: 50px;
+  background: #222; /* Color oscuro del engranaje */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centro {
+  width: 40px;
+  height: 40px;
+  background: #d3d3d3; /* Color metálico */
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap; /* Organiza los agujeros en dos filas */
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  gap: 5px; /* Espaciado entre agujeros */
+}
+
+.agujero {
+  width: 12px;
+  height: 12px;
+  background: #222; /* Color del fondo (simula el vacío) */
+  border-radius: 50%;
+  flex: 1 1 calc(50% - 5px); /* Tamaño proporcional sin `position` */
+}
+
+.tape {
+  width: 20px;
+  height: 20px;
+  background: black;
 }
 
 .details {
