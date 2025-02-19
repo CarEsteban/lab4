@@ -35,16 +35,16 @@ body {
 
   background: linear-gradient(
     to bottom,
-    #e91e63 0%,
-    #e91e63 20%,
+    #d81b60 0%,
+    #d81b60 20%,
     #e57373 20%,
     #e57373 40%,
-    #ffeb3b 40%,
-    #ffeb3b 60%,
+    #fbc02d 40%,
+    #fbc02d 60%,
     #8bc34a 60%,
     #8bc34a 80%,
-    #2196f3 80%,
-    #2196f3 100% /* Azul */
+    #039be5 80%,
+    #039be5 100%
   );
 
   display: flex;
@@ -54,53 +54,69 @@ body {
 
 .tape-container {
   width: 50%;
-  height: 60%;
+  height: 65%;
   background: #444444;
-  border-radius: 30px;
+  border-radius: 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
 .tuerca {
   width: 50px;
   height: 50px;
-  background: #222; /* Color oscuro del engranaje */
+  background: #d3d3d3; /* Color oscuro del engranaje */
   border-radius: 50%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
-
-.centro {
-  width: 40px;
-  height: 40px;
-  background: #d3d3d3; /* Color metálico */
-  border-radius: 50%;
-  display: flex;
-  flex-wrap: wrap; /* Organiza los agujeros en dos filas */
-  justify-content: space-evenly;
-  align-items: space-evenly;
-  gap: 5px; /* Espaciado entre agujeros */
+  gap: 15px;
+  transform: rotate(45deg);
 }
 
 .agujero {
-  width: 12px;
-  height: 12px;
-  background: #222; /* Color del fondo (simula el vacío) */
+  width: 15px;
+  height: 15px;
+  background: #444444; /* Color del fondo (simula el vacío) */
   border-radius: 50%;
-  flex: 1 1 calc(50% - 5px); /* Tamaño proporcional sin `position` */
+  flex: 0 0 30%; /* Tamaño proporcional sin `position` */
 }
 
 .tape {
-  width: 20px;
-  height: 20px;
-  background: black;
+  width: 60px;
+  height: 40px;
+
+  background: linear-gradient(
+    to right,
+    #a0522d 40%,
+    /* Marrón */ #d3d3d3 50% /* Gris claro */
+  );
 }
 
 .details {
-  background: gray;
-  width: 20%;
   flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   margin-top: 20px;
+}
+
+.slot {
+  width: 70%;
+  height: 50px;
+  background: #444444;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: solid 10px;
+}
+
+.hole {
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 50%;
 }
