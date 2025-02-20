@@ -128,7 +128,7 @@ body {
 
 .slot {
   width: 70%;
-  height: 50px;
+  height: 65px;
   background: #444444;
   clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
   display: flex;
