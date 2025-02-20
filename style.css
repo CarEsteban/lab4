@@ -8,15 +8,41 @@ body {
 }
 
 .cassette {
-  width: 400px;
-  height: 250px;
-  padding: 30px 25px 0 25px;
+  width: 450px;
+  height: 300px;
+  padding: 15px 25px 0px 25px;
   background-color: #444444;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
+  justify-content: space-between;
+  box-shadow: 0 0 10px 2px #777777;
+}
+
+/* Contenedor de las ruedas superiores */
+.ruedas-superiores,
+.ruedas-inferiores {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between; /* Alinea las ruedas en los extremos */
+}
+
+.ruedas-superiores {
+  margin-bottom: 10px;
+}
+
+/* Ruedas */
+.rueda {
+  width: 15px;
+  height: 15px;
+  background: #999999; /* Color gris claro */
+  border-radius: 50%;
+}
+
+.ruedas-inferiores .rueda {
+  margin-bottom: 15px;
 }
 
 .white-part {
@@ -24,9 +50,11 @@ body {
   background: white;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Mantiene la cinta arriba */
+  justify-content: center;
   width: 100%;
-  flex: 3;
+  height: 200px;
+  padding-top: 20px;
+  border-radius: 10px 10px 0 0;
 }
 
 .tape-section {
@@ -65,7 +93,7 @@ body {
 .tuerca {
   width: 50px;
   height: 50px;
-  background: #d3d3d3; /* Color oscuro del engranaje */
+  background: #d3d3d3;
   border-radius: 50%;
   display: flex;
   flex-wrap: wrap;
@@ -78,24 +106,19 @@ body {
 .agujero {
   width: 15px;
   height: 15px;
-  background: #444444; /* Color del fondo (simula el vacío) */
+  background: #444444;
   border-radius: 50%;
-  flex: 0 0 30%; /* Tamaño proporcional sin `position` */
+  flex: 0 0 30%;
 }
 
 .tape {
   width: 60px;
   height: 40px;
 
-  background: linear-gradient(
-    to right,
-    #a0522d 40%,
-    /* Marrón */ #d3d3d3 50% /* Gris claro */
-  );
+  background: linear-gradient(to right, #a0522d 40%, #d3d3d3 50%);
 }
 
 .details {
-  flex: 1;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -109,14 +132,32 @@ body {
   background: #444444;
   clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  border: solid 10px;
+  border-top: 5px solid #777777;
 }
 
 .hole {
-  width: 12px;
-  height: 12px;
-  background: black;
+  width: 14px;
+  height: 14px;
+  margin-top: 10px;
+  background: #222222;
   border-radius: 50%;
+}
+
+.slot .hole:nth-child(1) {
+  margin-left: 60px;
+}
+.slot .hole:nth-child(2) {
+  width: 18px;
+  height: 18px;
+  margin: 0 20px 10px 0;
+}
+.slot .hole:nth-child(3) {
+  width: 18px;
+  height: 18px;
+  margin: 0 0 10px 20px;
+}
+.slot .hole:nth-child(4) {
+  margin-right: 60px;
 }
