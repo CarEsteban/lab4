@@ -45,7 +45,12 @@ body {
   margin-bottom: 15px;
 }
 
-.white-part {
+.ruedas-superiores .rueda:first-child,
+.ruedas-inferiores .rueda:last-child {
+  background: #7f7f7f;
+}
+
+.cassette > .white-part {
   display: flex;
   background: white;
   flex-direction: column;
@@ -100,7 +105,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  transform: rotate(45deg);
+  /*transform: rotate(45deg);*/
+  animation: rotacionTuerca 3s linear infinite;
 }
 
 .agujero {
@@ -112,7 +118,7 @@ body {
 }
 
 .tape {
-  width: 60px;
+  width: calc(60px * 1.1);
   height: 40px;
 
   background: linear-gradient(to right, #a0522d 40%, #d3d3d3 50%);
@@ -160,4 +166,13 @@ body {
 }
 .slot .hole:nth-child(4) {
   margin-right: 60px;
+}
+
+@keyframes rotacionTuerca {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
