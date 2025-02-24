@@ -20,24 +20,22 @@ body {
   box-shadow: 0 0 10px 2px #777777;
 }
 
-/* Contenedor de las ruedas superiores */
 .ruedas-superiores,
 .ruedas-inferiores {
   width: 100%;
   display: flex;
   align-items: end;
-  justify-content: space-between; /* Alinea las ruedas en los extremos */
+  justify-content: space-between;
 }
 
 .ruedas-superiores {
   margin-bottom: 10px;
 }
 
-/* Ruedas */
 .rueda {
   width: 15px;
   height: 15px;
-  background: #999999; /* Color gris claro */
+  background: #999999;
   border-radius: 50%;
 }
 
@@ -64,30 +62,66 @@ body {
 
 .tape-section {
   width: 100%;
-  height: 60%;
-
-  background: linear-gradient(
-    to bottom,
-    #d81b60 0%,
-    #d81b60 20%,
-    #e57373 20%,
-    #e57373 40%,
-    #fbc02d 40%,
-    #fbc02d 60%,
-    #8bc34a 60%,
-    #8bc34a 80%,
-    #039be5 80%,
-    #039be5 100%
-  );
+  height: 80%;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.franjas-centrales {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+}
+
+.roja {
+  background: red;
+  width: 100%;
+  height: 30%;
+}
+
+.azul {
+  background: blue;
+  width: 100%;
+  height: 30%;
+}
+
+.naranja {
+  background: orange;
+  width: 100%;
+  height: 33.33%;
+}
+
+.amarilla {
+  background: yellow;
+  width: 100%;
+  height: 33.33%;
+}
+
+.verde {
+  background: green;
+  width: 100%;
+  height: 33.33%;
+}
+
+.franjas-izquierda,
+.franjas-derecha {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .tape-container {
-  width: 50%;
-  height: 65%;
+  width: 60%;
+  height: 100%;
   background: #444444;
   border-radius: 40px;
   display: flex;
