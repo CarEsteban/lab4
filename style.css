@@ -91,7 +91,7 @@ body {
   background: #444444;
   border-radius: 40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
@@ -109,6 +109,13 @@ body {
   animation: rotacionTuerca 3s linear infinite;
 }
 
+.tape-container .izquierda {
+  margin-right: 20px;
+}
+.tape-container .derecha {
+  margin-left: 20px;
+}
+
 .agujero {
   width: 15px;
   height: 15px;
@@ -118,10 +125,13 @@ body {
 }
 
 .tape {
-  width: calc(60px * 1.1);
+  width: 15%;
   height: 40px;
+  background: #a0522d;
+}
 
-  background: linear-gradient(to right, #a0522d 40%, #d3d3d3 50%);
+.tape-container .tape:nth-child(3) {
+  background: #cccccc;
 }
 
 .details {
