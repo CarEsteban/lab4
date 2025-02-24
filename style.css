@@ -62,7 +62,7 @@ body {
 
 .tape-section {
   width: 100%;
-  height: 80%;
+  height: 70%;
 
   display: flex;
   flex-direction: column;
@@ -80,31 +80,31 @@ body {
 }
 
 .roja {
-  background: red;
+  background: #be0974;
   width: 100%;
-  height: 30%;
+  height: 25%;
 }
 
 .azul {
-  background: blue;
+  background: #46a7c0;
   width: 100%;
-  height: 30%;
+  height: 25%;
 }
 
 .naranja {
-  background: orange;
+  background: #da6a57;
   width: 100%;
   height: 33.33%;
 }
 
 .amarilla {
-  background: yellow;
+  background: #eebc31;
   width: 100%;
   height: 33.33%;
 }
 
 .verde {
-  background: green;
+  background: #92a25b;
   width: 100%;
   height: 33.33%;
 }
@@ -166,6 +166,11 @@ body {
 
 .tape-container .tape:nth-child(3) {
   background: #cccccc;
+  margin-right: 10px;
+}
+
+.tape-container .tape:nth-child(2) {
+  margin-left: 10px;
 }
 
 .details {
